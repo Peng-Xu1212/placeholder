@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Room Booking</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito:400,700%7COpen+Sans:400,700" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	
+	<link rel="stylesheet" type="text/css" href="js/lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<a class="logo" href="index.html">Hotel booking</a>
+			<div class="main-nav">
+				<ul class="menu-main"><!--
+					--><li><a href="index.html">Home</a></li><!--
+					--><li><a href="under-construction.html">Help</a></li><!--
+					--><li><a href="under-construction.html">Contact us</a></li><!--
+					--><li><a class="menu-host" href="#">Become a host </a></li><!--
+				--></ul>
+				<div class="login">
+					<a class="btn btn-login btn-primary" data-toggle="modal" data-target="#form-login">Login</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="container">
+			<div class="row">
+				<h1>Thank you for your booking</h1>
+				<p>Thank you for completing our accommodation booking form. We will contact you within 24 hours in regards to your booking. If you do have any questions in the mean time please do not hesitate to contact us on +61-8-6666-8888 or email bookings@hotelbooking.com.</p>
+
+				<p>On receipt of payment, a Confirmation letter will be emailed or mailed to you, normally within 24 hours. </p>
+
+				<p>You can manage your booking in <a href="user-booking.html">My Account</a> page</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="bottom">
+					<div class="col col-sm-4">
+						<ul class="menu-footer">
+							<li><a href="under-construction.html">Contact us</a></li>
+							<li><a href="under-construction.html">FAQs</a></li>
+							<li><a href="under-construction.html">Website feedback</a></li>
+							<li><a href="under-construction.html">Privacy policy</a></li>
+							<li><a href="under-construction.html">Terms of use</a></li>
+						</ul>
+					</div>
+					<div class="col col-sm-4">
+						<ul class="menu-footer">
+							<li><a href="under-construction.html">Countries</a></li>
+							<li><a href="under-construction.html">Regions</a></li>
+							<li><a href="under-construction.html">Cities</a></li>
+							<li><a href="under-construction.html">Districts</a></li>
+							<li><a href="under-construction.html">Airports</a></li>
+						</ul>
+					</div>
+					<div class="col col-sm-4">
+						<div class="social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+						</div>
+						<div class="copyright">
+							&copy; 2018 Hotel Booking.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Modal - Login form -->
+<div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <div class="form-login-wrap">
+	                <form action="user-profile.html" data-toggle="validator">
+						<div class="form-group">
+					        <label>Username</label>
+					        <input type="text" class="form-control" value="" required />
+					    </div>
+					    <div class="form-group">
+					        <label>Password</label>
+					        <input type="password" class="form-control" value="" required />
+					    </div>
+					    <div class="form-group">
+					        <button type="submit" class="btn btn-form-login btn-primary">Login</button>
+					    </div>
+					</form>
+					<div class="or"><span>or</span></div>
+					<a href="#"><img class="btn-facebook" src="images/btn-facebook.png" alt="" /></a>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

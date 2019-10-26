@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Homepage</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito:400,700%7COpen+Sans:400,700" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	
+	<link rel="stylesheet" type="text/css" href="js/lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="js/lib/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<a class="logo" href="index.html">Hotel booking</a>
+			<div class="main-nav">
+				<ul class="menu-main"><!--
+					--><li><a href="index.html">Home</a></li><!--
+					--><li><a href="under-construction.html">Help</a></li><!--
+					--><li><a href="under-construction.html">Contact us</a></li><!--
+					--><li><a class="menu-host" href="#">Become a host </a></li><!--
+				--></ul>
+				<div class="login">
+					<a class="btn btn-login btn-primary" data-toggle="modal" data-target="#form-login">Login</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section search-banner">
+		<div class="container">
+			<h2>Book hotels online</h2>
+			<div class="form-search">
+				<form method="post" action="search-result.html"><!--
+					--><div class="form-field">
+						<input type="text" name="location" placeholder="LOCATION" />	
+					</div><!--
+					--><div class="form-field">
+						<div class="input-daterange input-group" id="datepicker">
+						    <input type="text" class="startdate" name="start" placeholder="START DATE" />
+						    <input type="text" class="enddate" name="end" placeholder="END DATE" />
+						</div>
+					</div><!--
+					--><div class="form-field">
+						<select class="select-people">
+							<option value="1">1 adult</option>
+							<option value="2">2 adults</option>
+							<option value="3">3 adults</option>
+							<option value="4">4 adults</option>
+							<option value="5">5 adults</option>
+							<option value="6">6 adults</option>
+							<option value="7">7 adults</option>
+							<option value="8">8 adults</option>
+							<option value="9">9 adults</option>
+							<option value="10">10 adults</option>
+							<option value="11">11 adults</option>
+							<option value="12">12 adults</option>
+							<option value="13">13 adults</option>
+							<option value="14">14 adults</option>
+							<option value="15">15 adults</option>
+							<option value="16">16 adults</option>
+							<option value="17">17 adults</option>
+							<option value="18">18 adults</option>
+							<option value="19">19 adults</option>
+							<option value="20">20 adults</option>
+						</select>
+					</div><!--
+					--><div class="form-field form-submit">
+						<input class="btn btn-primary" type="submit" value="Search" />
+					</div><!--
+				--></form>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="featured-section">
+			<div class="container">
+				<h2 class="section-title">Featured Hotels</h2>
+				<div class="list-hotels row">
+					<div class="hotel-item">
+						<a href="hotel-details.html" class="inner" style="background-image:url(images/pics/hotel1.jpg)">
+							<span class="title">
+								10% off in Adelaide
+							</span>
+						</a>
+					</div>
+					<div class="hotel-item">
+						<a href="hotel-details.html" class="inner" style="background-image:url(images/pics/hotel2.jpg)">
+							<span class="title">
+								20% off in Melbourne
+							</span>
+						</a>
+					</div>
+					<div class="hotel-item">
+						<a href="hotel-details.html" class="inner" style="background-image:url(images/pics/hotel3.jpg)">
+							<span class="title">
+								40% off in Perth
+							</span>
+						</a>
+					</div>
+					<div class="hotel-item">
+						<a href="hotel-details.html" class="inner" style="background-image:url(images/pics/hotel4.jpg)">
+							<span class="title">
+								10% off in Brisbane
+							</span>
+						</a>
+					</div>
+					<div class="hotel-item">
+						<a href="hotel-details.html" class="inner" style="background-image:url(images/pics/hotel5.jpg)">
+							<span class="title">
+								30% off in Sydney
+							</span>
+						</a>
+					</div>
+					<div class="hotel-item">
+						<a class="inner" style="background-image:url(images/pics/hotel6.jpg)">
+							<span class="title">
+								50% off in Gold Coast
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="bottom">
+					<div class="col col-sm-4">
+						<ul class="menu-footer">
+							<li><a href="under-construction.html">Contact us</a></li>
+							<li><a href="under-construction.html">FAQs</a></li>
+							<li><a href="under-construction.html">Website feedback</a></li>
+							<li><a href="under-construction.html">Privacy policy</a></li>
+							<li><a href="under-construction.html">Terms of use</a></li>
+						</ul>
+					</div>
+					<div class="col col-sm-4">
+						<ul class="menu-footer">
+							<li><a href="under-construction.html">Countries</a></li>
+							<li><a href="under-construction.html">Regions</a></li>
+							<li><a href="under-construction.html">Cities</a></li>
+							<li><a href="under-construction.html">Districts</a></li>
+							<li><a href="under-construction.html">Airports</a></li>
+						</ul>
+					</div>
+					<div class="col col-sm-4">
+						<div class="social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+						</div>
+						<div class="copyright">
+							&copy; 2018 Hotel Booking.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Modal - Login form -->
+<div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <div class="form-login-wrap">
+	                <form action="user-profile.html" data-toggle="validator">
+						<div class="form-group">
+					        <label>Username</label>
+					        <input type="text" class="form-control" value="" required />
+					    </div>
+					    <div class="form-group">
+					        <label>Password</label>
+					        <input type="password" class="form-control" value="" required />
+					    </div>
+					    <div class="form-group">
+					        <button type="submit" class="btn btn-form-login btn-primary">Login</button>
+					    </div>
+					</form>
+					<div class="or"><span>or</span></div>
+					<a href="#"><img class="btn-facebook" src="images/btn-facebook.png" alt="" /></a>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

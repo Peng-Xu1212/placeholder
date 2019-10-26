@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Search Result</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito:400,700%7COpen+Sans:400,700" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	
+	<link rel="stylesheet" type="text/css" href="js/lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/lib/mustache.min.js"></script>
+	<script src="js/main.js"></script>
+	
+	<script src="js/search.js"></script>
+	<script src="data/hotel-list.json"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<a class="logo" href="index.html">Hotel booking</a>
+			<div class="main-nav">
+				<ul class="menu-main"><!--
+					--><li><a href="index.html">Home</a></li><!--
+					--><li><a href="under-construction.html">Help</a></li><!--
+					--><li><a href="under-construction.html">Contact us</a></li><!--
+					--><li><a class="menu-host" href="#">Become a host </a></li><!--
+				--></ul>
+				<div class="login">
+					<a class="btn btn-login btn-primary" data-toggle="modal" data-target="#form-login">Login</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section search-bar">
+		<div class="container">
+			<div class="form-search">
+				<form method="post" action="search-result.html"><!--
+					--><div class="form-field">
+						<input type="text" name="location" placeholder="LOCATION" />	
+					</div><!--
+					--><div class="form-field">
+						<input class="startdate" type="text" name="startDate" placeholder="START DATE" /><input class="enddate" type="text" name="endDate" placeholder="END DATE" />
+					</div><!--
+					--><div class="form-field">
+						<input type="text" name="nopeople" placeholder="PEOPLE" />
+					</div><!--
+					--><div class="form-field form-submit">
+						<input class="btn btn-primary" type="submit" value="Search" />
+					</div><!--
+				--></form>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="container">
+			<div class="control-bar">
+				<div class="left">
+					<a href="search-map.html">MAP VIEW</a>
+				</div>
+				<div class="right">
+					<select id="sortby">
+						<option value="0">Default</option>
+						<option value="1">Price Low - High</option>
+						<option value="2">Price High - Low</option>
+						<option value="3">Rating</option>
+					</select>
+				</div>
+			</div>
+			<div id="hotels-list" class="hotels-list listing"></div>
+			<div class="paging">
+				<a href="#">Prev</a>
+				<a class="active" href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">Next</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="bottom">
+					<div class="col col-sm-4">
+						<ul class="menu-footer">
+							<li><a href="under-construction.html">Contact us</a></li>
+							<li><a href="under-construction.html">FAQs</a></li>
+							<li><a href="under-construction.html">Website feedback</a></li>
+							<li><a href="under-construction.html">Privacy policy</a></li>
+							<li><a href="under-construction.html">Terms of use</a></li>
+						</ul>
+					</div>
+					<div class="col col-sm-4">
+						<ul class="menu-footer">
+							<li><a href="under-construction.html">Countries</a></li>
+							<li><a href="under-construction.html">Regions</a></li>
+							<li><a href="under-construction.html">Cities</a></li>
+							<li><a href="under-construction.html">Districts</a></li>
+							<li><a href="under-construction.html">Airports</a></li>
+						</ul>
+					</div>
+					<div class="col col-sm-4">
+						<div class="social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+						</div>
+						<div class="copyright">
+							&copy; 2018 Hotel Booking.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Modal - Login form -->
+<div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <div class="form-login-wrap">
+	                <form action="user-profile.html" data-toggle="validator">
+						<div class="form-group">
+					        <label>Username</label>
+					        <input type="text" class="form-control" value="" required />
+					    </div>
+					    <div class="form-group">
+					        <label>Password</label>
+					        <input type="password" class="form-control" value="" required />
+					    </div>
+					    <div class="form-group">
+					        <button type="submit" class="btn btn-form-login btn-primary">Login</button>
+					    </div>
+					</form>
+					<div class="or"><span>or</span></div>
+					<a href="#"><img class="btn-facebook" src="images/btn-facebook.png" alt="" /></a>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BEGIN: Search Item Template -->
+<div style="display: none">
+<script id="tmpl-search-item" type="text/x-tmpl-mustache">
+{{#hotels}}
+<div class="item" hotel-id="{{hotel_id}}">
+	<div class="img">
+		<a href="{{hotel_url}}" style="background-image: url({{hotel_image}});"></a>
+	</div>
+	<div class="bd">
+		<div class="left">
+			<h2><a href="{{hotel_url}}">{{hotel_name}}</a></h2>
+			<div class="rating rate-{{hotel_rate}}"></div>
+			<div class="desc">{{hotel_desc}}</div>
+		</div>
+		<div class="right">
+			<div class="price">${{hotel_price}}</div>
+			<a class="btn btn-primary btn-view-hotel" href="{{hotel_url}}">VIEW</a>
+		</div>
+	</div>
+</div>
+{{/hotels}}
+</script>
+</div>
+<!-- END: Search Item Template -->
+</body>
+</html>

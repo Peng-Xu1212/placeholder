@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Hotel Information</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito:400,700%7COpen+Sans:400,700" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	
+	<link rel="stylesheet" type="text/css" href="js/lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/lib/validator.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<a class="logo" href="index.html">Hotel booking</a>
+			<div class="main-nav">
+				<ul class="menu-main"><!--
+					--><li><a href="index.html">Home</a></li><!--
+					--><li><a href="under-construction.html">Help</a></li><!--
+					--><li><a href="under-construction.html">Contact us</a></li><!--
+					--><li><a class="menu-host" href="#">Become a host </a></li><!--
+				--></ul>
+				<div class="login">
+					<a class="btn btn-login btn-primary" data-toggle="modal" data-target="#form-login">Login</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<ul class="nav nav-tabs">
+			<li><a href="management-hotel-booking.html">Booking</a></li>
+			<li><a href="management-hotel-rooms.html">Room Management</a></li>
+			<li class="active"><a href="management-hotel-profile.html">Hotel Information</a></li>
+		</ul>
+		<div class="container-fluid">
+			<div class="form-wrap">
+				<form class="form-horizontal" action="management-hotel-profile.html" data-toggle="validator">
+				    <div class="form-group">
+				        <label class="col-sm-2 control-label">Name</label>
+				        <div class="col-sm-10">
+				            <input type="text" class="form-control" value="Hotel 88" required />
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label class="col-sm-2 control-label">Address</label>
+				        <div class="col-sm-10">
+				            <input type="text" class="form-control" value="88 King William" required />
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label class="col-sm-2 control-label">Phone</label>
+				        <div class="col-sm-10">
+				            <input type="text" class="form-control" value="8888 8888" data-error="Phone number is invalid" required />
+				            <div class="help-block with-errors"></div>
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label class="col-sm-2 control-label">Short description</label>
+				        <div class="col-sm-10">
+				            <textarea class="form-control" rows="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				            </textarea>
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label class="col-sm-2 control-label">Description</label>
+				        <div class="col-sm-10">
+				            <textarea class="form-control" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				            </textarea>
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label class="col-sm-2 control-label">Images</label>
+				        <div class="col-sm-10">
+				            <input type="file" name="img" multiple>
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label class="col-sm-2 control-label"></label>
+				        <div class="col-sm-10">
+				            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded" style="width: 140px; height: 140px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzE0MHgxNDAKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjJhZmI5MjI5MiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2MmFmYjkyMjkyIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA1NDY4NzUiIHk9Ijc0LjUiPjE0MHgxNDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
+				            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded" style="width: 140px; height: 140px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzE0MHgxNDAKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjJhZmI5MjI5MiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2MmFmYjkyMjkyIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA1NDY4NzUiIHk9Ijc0LjUiPjE0MHgxNDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
+				            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded" style="width: 140px; height: 140px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzE0MHgxNDAKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNjJhZmI5MjI5MiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE2MmFmYjkyMjkyIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA1NDY4NzUiIHk9Ijc0LjUiPjE0MHgxNDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <div class="col-sm-offset-2 col-sm-10">
+				            <button type="submit" class="btn btn-primary">Save</button>
+				        </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="bottom">
+					<div class="col col-sm-4">
+						<ul class="menu-footer">
+							<li><a href="under-construction.html">Contact us</a></li>
+							<li><a href="under-construction.html">FAQs</a></li>
+							<li><a href="under-construction.html">Website feedback</a></li>
+							<li><a href="under-construction.html">Privacy policy</a></li>
+							<li><a href="under-construction.html">Terms of use</a></li>
+						</ul>
+					</div>
+					<div class="col col-sm-4">
+						<ul class="menu-footer">
+							<li><a href="under-construction.html">Countries</a></li>
+							<li><a href="under-construction.html">Regions</a></li>
+							<li><a href="under-construction.html">Cities</a></li>
+							<li><a href="under-construction.html">Districts</a></li>
+							<li><a href="under-construction.html">Airports</a></li>
+						</ul>
+					</div>
+					<div class="col col-sm-4">
+						<div class="social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+						</div>
+						<div class="copyright">
+							&copy; 2018 Hotel Booking.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Modal - Login form -->
+<div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+                <div class="form-login-wrap">
+	                <form action="user-profile.html" data-toggle="validator">
+						<div class="form-group">
+					        <label>Username</label>
+					        <input type="text" class="form-control" value="" required />
+					    </div>
+					    <div class="form-group">
+					        <label>Password</label>
+					        <input type="password" class="form-control" value="" required />
+					    </div>
+					    <div class="form-group">
+					        <button type="submit" class="btn btn-form-login btn-primary">Login</button>
+					    </div>
+					</form>
+					<div class="or"><span>or</span></div>
+					<a href="#"><img class="btn-facebook" src="images/btn-facebook.png" alt="" /></a>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
